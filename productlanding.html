@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acme Product — Landing</title>
+  <meta name="description" content="Acme Product landing page demo">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="header">
+    <div class="header-inner">
+      <img id="header-img" src="https://via.placeholder.com/150" alt="Acme Logo">
+      <nav id="nav-bar">
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#video-section">Demo</a>
+        <a class="nav-link" href="#subscribe">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="container">
+      <h1>Acme Product — Move Fast, Ship Smart</h1>
+      <p class="lead">Enterprise-grade tooling for freelancers and teams who want measurable velocity.</p>
+      <a class="cta" href="#subscribe">Get early access</a>
+    </section>
+
+    <section id="features" class="container features">
+      <article class="feature">
+        <h2>Robust</h2>
+        <p>Built with scalability in mind. Ship with confidence.</p>
+      </article>
+      <article class="feature">
+        <h2>Secure</h2>
+        <p>Security-first architecture with modern practices.</p>
+      </article>
+      <article class="feature">
+        <h2>Integrated</h2>
+        <p>Easily plug into existing workflows and APIs.</p>
+      </article>
+    </section>
+
+    <section id="video-section" class="container video-wrap">
+      <h2>Product Demo</h2>
+      <iframe id="video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="Product demo" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <section id="subscribe" class="container">
+      <h2>Join the waitlist</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+        <label for="email" class="sr-only">Email address</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+        <input id="submit" type="submit" value="Request Access">
+      </form>
+    </section>
+  </main>
+
+  <footer id="footer" class="container">
+    <p>&copy; Acme Product — All rights reserved</p>
+  </footer>
+
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
